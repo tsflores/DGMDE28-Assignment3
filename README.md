@@ -1,2 +1,4 @@
-# DGMDE28-Assignment3
-Completion of Tic Tac Toe for Harvard Extension School Course DGMD E-28
+# DGMDE28-Assignment2b
+The next step towards the completion of the Tic Tac Toe game for Harvard Extension School course DGMD E-28
+
+
