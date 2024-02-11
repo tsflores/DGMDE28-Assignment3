@@ -78,11 +78,11 @@
         <!-- JavaScript to create 9 div elements on the page with class and ID and an event listener for each square -->
         <script>
             const NUM_SQUARES = 9;
-            for (i = 0; i < NUM_SQUARES; i++) {
-                id = "sq" + i;
-                document.write("<div class='square' id='" + id + "'></div>");
-                document.querySelector("#sq" + i).addEventListener("click", fillInSquare);
-            }
+                for (i = 0; i < NUM_SQUARES; i++) {
+                    id = "sq" + i;
+                    document.write("<div class='square' id='" + id + "'></div>");
+                    document.querySelector("#sq" + i).addEventListener("click", fillInSquare);
+                }
 
             // function to populate each square with an X when clicked and to alert user of the square number clicked
             function fillInSquare() {
