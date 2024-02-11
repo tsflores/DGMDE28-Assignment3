@@ -49,22 +49,28 @@
         }
 
         /* style the players turn and game status to center on page and apply a border */
+        #turn {
+            grid-row-start: 4;
+            color: #3E63E6;
+        }
+
+        #gameStatus {
+            grid-row-start: 5;
+            color: black;
+        }
+
         #turn,
         #gameStatus {
+            grid-column-end: span 3;
             margin-left: auto;
             margin-right: auto;
             margin-top: 1.5rem;
             text-align: center;
             font-size: 2rem;
-            width: 400px;
+            width: 350px;
             border: solid 1px black;
             border-radius: 25px;
-            color: #3E63E6;
             font-weight: bold;
-        }
-
-        #gameStatus {
-            color: black;
         }
     </style>
 
@@ -78,11 +84,15 @@
         <!-- JavaScript to create 9 div elements on the page with class and ID and an event listener for each square -->
         <script>
             const NUM_SQUARES = 9;
-                for (i = 0; i < NUM_SQUARES; i++) {
-                    id = "sq" + i;
-                    document.write("<div class='square' id='" + id + "'></div>");
-                    document.querySelector("#sq" + i).addEventListener("click", fillInSquare);
-                }
+            for (i = 0; i < NUM_SQUARES; i++) {
+                id = "sq" + i;
+                document.write("<div class='square' id='" + id + "'></div>");
+                document.querySelector("#sq" + i).addEventListener("click", fillInSquare);
+            }
+            
+            // Adjusted div's from assignment 1 to fall within the wrapper and get created by JavaScript 
+            document.write("<div id='turn'> Its Xs Turn</div> </br>");
+            document.write("<div id='gameStatus'> Tie Game - No Winner </div>");
 
             // function to populate each square with an X when clicked and to alert user of the square number clicked
             function fillInSquare() {
@@ -102,8 +112,6 @@
             }
         </script>
     </div>
-    <div id="turn"> It's X's Turn </div>
-    <div id="gameStatus"> Tie Game - No Winner </div>
 </body>
 
 </html>
